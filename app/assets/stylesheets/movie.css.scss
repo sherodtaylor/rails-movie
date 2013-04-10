@@ -1,0 +1,35 @@
+// Place all the styles related to the movie controller here.  // They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h2 {
+  text-align: center;
+}
+
+
+.container {
+  width:800px;float:left;
+}
+#details {
+  width:400px;
+  float:right;
+}
+#poster {
+  width:400px; 
+  float:left
+}
+img {
+  width: 150px;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #00f;
+}
+
+#details dd, dt {
+  text-size: 20px;
+  text-align: inline
+}
+
