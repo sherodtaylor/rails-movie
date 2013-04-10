@@ -6,26 +6,57 @@ h2 {
   text-align: center;
 }
 
+.form-wrapper {
 
+}
+input {
+  width: 400px;
+  height: 50px;
+ font-size: 17.5px;
+ border-radius: 15px;
+ text-align: center;
+}
+
+button {
+ padding: 11px 19px;
+ font-size: 17.5px;
+ border-radius: 10px;
+}
+.center {
+  width: 800px;
+  margin: auto;
+}
+.list {
+  width: 600px;
+  margin: auto;
+}
 .container {
-  width:800px;float:left;
+  width:800px;
+  margin: auto;
 }
-#details {
+#details, #poster {
   width:400px;
-  float:right;
+  float:left;
 }
-#poster {
-  width:400px; 
-  float:left
-}
+
 img {
-  width: 150px;
+  width: 200px;
   height: auto;
+  margin-left: 140px;
+}
+
+#details img {
+  height: 20px;
+  width: auto;
+}
+.emoji {
+  height: 20px;
+  width: auto;
+
 }
 
 a {
   text-decoration: none;
-  color: #00f;
 }
 
 #details dd, dt {
@@ -33,3 +64,6 @@ a {
   text-align: inline
 }
 
+.list li {
+  font-size: 20px;
+}

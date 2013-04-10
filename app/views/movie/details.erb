@@ -4,14 +4,19 @@
 <img src="<%= @poster %>">
 </div>
 <div id="details">
-  <dt>Tomato Score</dt>
-  <dd><%= @tomatoes %></dd>
+  <dl>
+  <img class="emoji" src="/tomato.png" alt="🍅" title="🍅"> <%= @tomatoes %>
   <dt>Plot</dt>
   <p><%= @plot %></p>
   <br />
   <dt>Actors</dt>
-  <dd><%= @actors %></dd>
+  <% @actors.each do |actor| %>
+    <dd><li><%= actor %></li></dd>
+  <% end  %>
   <dt>Director</dt>
-  <dd><%= @director %></dd>
+  <% @director.each do |director|%>
+  <dd><li><%= director%></li></dd>
+  <% end %>
+  </dl>
 </div>
 </div>

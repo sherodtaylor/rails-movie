@@ -2,6 +2,7 @@ class MovieController < ApplicationController
   def results
     @query = params[:q]
     m = MovieSearch.new
+    @movie = Movies.new
     @result = m.search(@query)
   end
   
@@ -13,8 +14,8 @@ class MovieController < ApplicationController
     @title = @result['Title']
     @plot = @result['Plot']
     @poster = @result['Poster']
-    @actors = @result['Actors']
-    @director = @result['Director']
+    @actors = @result['Actors'].split(', ')
+    @director = @result['Director'].split(', ')
     @tomatoes = @result['tomatoMeter'] 
   end
 end

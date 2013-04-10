@@ -1,6 +1,11 @@
+<div class="center">
 <%= render "movie/form" %>
-<ol>
-  <% @result.each do |r| %>
-    <li><a href="/movie?id=<%= r['imdbID'] %>"><%= r['Title'] %></a> <%= r['Year'] %></li>
-  <% end %>
-</ol>
+  <% if @result.nil? %>
+    <h2> No Results Found</h2>
+<% else %>
+  <h2>Search Results For <%= @query.capitalize %></h2>
+<% end %>
+  <div class="list">
+     <%= render "movie/list" unless @result.nil? %>
+  </div>
+</div>
