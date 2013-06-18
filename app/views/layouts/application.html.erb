@@ -3,12 +3,33 @@
 <head>
   <title>RailsMovie</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+   <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 </head>
 <body>
-<h1></h1>
-<%= yield %>
 
+<%= yield %>
+<script id="template" charset="utf-8">
+<h2>{{ title }}</h2>
+ <div id="poster">
+   <img src="{{ poster }}" alt="" />
+ </div>
+ <div id="details">
+  <dl>
+    <dt>Tomato Rating</dt>
+    <dd><img class="emoji" src="/tomato.png" alt="🍅" title="🍅"> {{ tomatoRating }}</dd>
+    <p> {{ plot }} </p>
+    <br />
+    <dt>Rating</dt>
+    <dd> {{ rated }} </dd>
+    <dt>Actors</dt>
+    <dd> {{ actors }} </dd>
+    <dt>Director</dt>
+    <dd> {{ directors }} </dd>
+  </dl>
+ </div>
+</script>
 </body>
 </html>

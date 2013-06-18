@@ -1,0 +1,11 @@
+.form {
+  text-align:center;
+}
+
+body {
+  margin-top:20px;
+}
+
+input {
+  border-radius: 0;
+}
