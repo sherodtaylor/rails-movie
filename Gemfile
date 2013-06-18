@@ -18,11 +18,15 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 group :production do
-    gem 'sqlite3'
+    gem 'pg'
 end
 
 group :development, :test do
     gem 'rspec-rails', '~> 2.0'
+end
+
+group :development, :test do
+  gem 'sqlite3'
 end
 
 gem 'jquery-rails'
