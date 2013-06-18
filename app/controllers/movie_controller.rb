@@ -1,3 +1,4 @@
+require 'open-uri'
 class MovieController < ApplicationController
   def home
   end
@@ -13,7 +14,7 @@ class MovieController < ApplicationController
     actors = result['Actors'].split(', ')
     director = result['Director'].split(', ')
     tomatoes = result['tomatoMeter']
-    hash = { :title => title, :plot => plot, :poster => poster, :actors => actors, :directors => director, :tomatoRating => tomatoes }
+    hash = { :title => title, :plot => plot, :poster => URI.escape(poster), :actors => actors, :directors => director, :tomatoRating => tomatoes }
     render :json => hash
   end
 end
